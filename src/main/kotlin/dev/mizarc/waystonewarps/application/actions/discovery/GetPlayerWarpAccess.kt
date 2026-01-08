@@ -9,14 +9,16 @@ class GetPlayerWarpAccess(private val discoveryRepository: DiscoveryRepository,
                           private val warpRepository: WarpRepository
 ) {
     fun execute(playerId: UUID): List<Warp> {
+        val allWarps = warpRepository.getAll()
+        val publicWarps = allWarps.filter { !it.isLocked }
         val discoveries = discoveryRepository.getByPlayer(playerId)
-        val warps = mutableListOf<Warp>()
+        val discoveredWarps = mutableListOf<Warp>()
         for (discovery in discoveries) {
             val warp = warpRepository.getById(discovery.warpId)
             if (warp != null) {
-                warps.add(warp)
+                discoveredWarps.add(warp)
             }
         }
-        return warps
+        return (publicWarps + discoveredWarps).distinctBy { it.id }
     }
 }

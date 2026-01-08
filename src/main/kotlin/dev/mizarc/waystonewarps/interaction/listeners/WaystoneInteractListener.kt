@@ -158,6 +158,11 @@ class WaystoneInteractListener(private val configService: ConfigService): Listen
                 return
             }
 
+            if (baseBlock.type.toString() == "EMERALD_BLOCK" && !player.hasPermission("waystonewarps.create.public")) {
+                player.sendActionBar(Component.text("You don't have permission to create public warps").color(PrimaryColourPalette.FAILED.color))
+                return
+            }
+
             // Open the menu
             menuNavigator.openMenu(WarpNamingMenu(player, menuNavigator, clickedBlock.location))
         }

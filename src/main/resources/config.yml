@@ -13,7 +13,7 @@ teleport_timer: 5
 # - ITEM
 # - XP
 # - MONEY
-teleport_cost_type: ITEM
+teleport_cost_type: XP
 
 # If the cost type is set to item, this value will be used to determine what
 # item to consume on teleport.
@@ -22,14 +22,14 @@ teleport_cost_item: ENDER_PEARL
 # The amount it costs to teleport. This is the amount of item if set to item,
 # amount of xp levels if set to xp, and the amount of money if set to money.
 # Decimals can be used for money type.
-teleport_cost_amount: 4
+teleport_cost_amount: 0
 
 # If the player can open the warp list menu via right-clicking on a compass.
-warps_menu_via_compass: true
+warps_menu_via_compass: false
 
 # If the player can open the warp list menu via right-clicking on a waystone.
 # This replaces warp management menu to be shift-right click instead.
-warps_menu_via_waystone: false
+warps_menu_via_waystone: true
 
 # If a hologram should display above the waystone showing its name and location.
 holograms_enabled: true
@@ -131,12 +131,18 @@ waystone_skins:
     - WAXED_WEATHERED_CUT_COPPER
     - WAXED_WEATHERED_CUT_COPPER
     - WAXED_WEATHERED_CUT_COPPER_SLAB
-  WAXED_OXIDIZED_CUT_COPPER:
-    - WAXED_OXIDIZED_CUT_COPPER
-    - WAXED_OXIDIZED_CHISELED_COPPER
-    - WAXED_OXIDIZED_CUT_COPPER
-    - WAXED_OXIDIZED_CUT_COPPER
-    - WAXED_OXIDIZED_CUT_COPPER_SLAB
+   WAXED_OXIDIZED_CUT_COPPER:
+     - WAXED_OXIDIZED_CUT_COPPER
+     - WAXED_OXIDIZED_CHISELED_COPPER
+     - WAXED_OXIDIZED_CUT_COPPER
+     - WAXED_OXIDIZED_CUT_COPPER
+     - WAXED_OXIDIZED_CUT_COPPER_SLAB
+   EMERALD_BLOCK:
+     - SMOOTH_STONE
+     - LODESTONE
+     - EMERALD_BLOCK
+     - SMOOTH_STONE
+     - SMOOTH_STONE_SLAB
 
 # Blocks that will be replaced with a solid platform when teleport to a waystone
 # occurs. It is recommended to add blocks that players are able to fall through
