@@ -8,6 +8,7 @@ Here are some of the cool features you can expect:
 - **Physically Grounded** - Warps are bound via a physical waystone structure in the world, making the experience much more immersive.
 - **Intuitive GUI Menus** - Your entire waystone can be managed using click menus. Never need to type a command ever again.
 - **Manage Access Easily** - Limit your waystones to only you, open it up to your friends, or leave it out there for the public to find.
+- **Auto-Discoverable Emerald Waystones** - Create special public waystones using emerald blocks that are automatically visible to all players without needing discovery.
 - **Teleportation Fees** - Let your players work for it! Change teleportation costs between xp, items, or even a provided economy plugin.
 
 ## Installation
@@ -40,6 +41,7 @@ To teleport to waystones, right click with a compass in hand. This will bring up
 - waystonewarps.teleport.interworld - Allows teleportation to undiscovered warps
 - waystonewarps.teleport.cooldown_bypass - Allows bypassing the cooldown timer
 - waystonewarps.create - Allow the creation of warps
+- waystonewarps.create.public - Allow the creation of public emerald waystones (OP default)
 - waystonewarps.discover - Allow the discovery of warps
 
 ## Per Player Limits
@@ -73,8 +75,27 @@ cd waystone-warps/
 ```
 Built .jar binary can be found in the `build/libs` folder.
 
+## Changelog
+
+### Version 1.1.0
+- **New Feature: Auto-Discoverable Emerald Waystones**
+  - Added support for creating public waystones using emerald blocks as base.
+  - These waystones are automatically visible to all players in the warp menu without requiring individual discovery.
+  - Requires OP permission by default (`waystonewarps.create.public`).
+- **Configuration Changes**
+  - Added `EMERALD_BLOCK` skin to `waystone_skins` in config.yml.
+  - Reversed default menu access: compass now disabled, waystone right-click enabled by default.
+  - Changed default teleport cost to free XP instead of Ender Pearls.
+- **UI Improvements**
+  - Updated menu wording back to "Discovered" for consistency.
+- **Bug Fixes**
+  - Fixed YAML indentation issues in config.yml causing load failures.
+
+### Version 1.0.0
+- Initial release with core waystone functionality.
+
 ## Support
-If you encounter any bugs, crashes, or unexpected behaviour, please [open an issue](https://github.com/mizarc/waystone-warps/issues) in this repository.
+If you encounter any bugs, crashes, or unexpected behaviour, please [open an issue](https://github.com/gooseontheloose/waystone-warps/issues) in this repository.
 
 ## License
 Waystone Warps is licensed under the permissive MIT license. Please view [LICENSE](LICENSE) for more info.
