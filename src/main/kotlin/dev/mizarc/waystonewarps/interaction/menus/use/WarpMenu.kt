@@ -286,7 +286,7 @@ class WarpMenu(
             } else {
                 configService.getPrivateWarpDescription()
             }
-            customLore.add("§7$description")
+            customLore.add("§b§l$description")
 
             val warpItem = ItemStack(warpModel.icon).applyIconMeta(warp.iconMeta).name(warpModel.name).lore(customLore)
 
