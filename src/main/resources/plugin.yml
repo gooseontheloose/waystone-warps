@@ -20,15 +20,15 @@ permissions:
       waystonewarps.bypass.open_menu: true
       waystonewarps.create: true
 
-   waystonewarps.create:
-     description: Allows creating waystone warps
-     default: true
+  waystonewarps.create:
+    description: Allows creating waystone warps
+    default: true
 
-   waystonewarps.create.public:
-     description: Allows creating public emerald waystones
-     default: op
+  waystonewarps.create.public:
+    description: Allows creating public emerald waystones
+    default: op
 
-   waystonewarps.discover:
+  waystonewarps.discover:
     description: Allows discovering waystone warps
     default: true
 

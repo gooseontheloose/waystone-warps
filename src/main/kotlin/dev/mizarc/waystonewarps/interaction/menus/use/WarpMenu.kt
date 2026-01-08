@@ -11,6 +11,7 @@ import dev.mizarc.waystonewarps.application.actions.teleport.TeleportPlayer
 import dev.mizarc.waystonewarps.application.actions.discovery.GetPlayerWarpAccess
 import dev.mizarc.waystonewarps.application.actions.management.GetOwnedWarps
 import dev.mizarc.waystonewarps.application.actions.whitelist.GetWhitelistedPlayers
+import dev.mizarc.waystonewarps.application.services.ConfigService
 import dev.mizarc.waystonewarps.domain.warps.Warp
 import dev.mizarc.waystonewarps.interaction.localization.LocalizationKeys
 import dev.mizarc.waystonewarps.interaction.localization.LocalizationProvider
@@ -39,6 +40,7 @@ class WarpMenu(
     private val getWhitelistedPlayers: GetWhitelistedPlayers by inject()
     private val getFavouritedWarpAccess: GetFavouritedWarpAccess by inject()
     private val getOwnedWarps: GetOwnedWarps by inject()
+    private val configService: ConfigService by inject()
 
     private var viewMode = 0  // 0 = All, Favourites, Owned
     private var page = 1
@@ -277,6 +279,14 @@ class WarpMenu(
                     customLore.add(2, localizationProvider.get(player.uniqueId, LocalizationKeys.MENU_WARP_ITEM_WARP_LORE_LEFT_CLICK))
                 }
             }
+
+            // Add warp type description
+            val description = if (warp.block == "EMERALD_BLOCK") {
+                configService.getPublicWarpDescription()
+            } else {
+                configService.getPrivateWarpDescription()
+            }
+            customLore.add("§7$description")
 
             val warpItem = ItemStack(warpModel.icon).applyIconMeta(warp.iconMeta).name(warpModel.name).lore(customLore)
 

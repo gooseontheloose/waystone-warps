@@ -77,10 +77,17 @@ Built .jar binary can be found in the `build/libs` folder.
 
 ## Changelog
 
+### Version 1.2.0
+- **New Feature: Warp Type Descriptions**
+  - Added configurable descriptions in warp menu lore to distinguish public emerald waystones ("Public Server Warp") from private/user-created waystones ("Player Created Warp").
+  - Editable in config.yml for server customization (e.g., "Ancient Shrine" for RPG themes).
+- **Configuration Changes**
+  - Added `public_warp_description` and `private_warp_description` options in config.yml.
+
 ### Version 1.1.0
 - **New Feature: Auto-Discoverable Emerald Waystones**
   - Added support for creating public waystones using emerald blocks as base.
-  - These waystones are automatically visible to all players in the warp menu without requiring individual discovery.
+  - These waystones are automatically visible to all players without requiring individual discovery.
   - Requires OP permission by default (`waystonewarps.create.public`).
 - **Configuration Changes**
   - Added `EMERALD_BLOCK` skin to `waystone_skins` in config.yml.

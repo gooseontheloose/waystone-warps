@@ -24,6 +24,12 @@ teleport_cost_item: ENDER_PEARL
 # Decimals can be used for money type.
 teleport_cost_amount: 0
 
+# Description shown in lore for public emerald waystones
+public_warp_description: "Public Server Warp"
+
+# Description shown in lore for private/user-created waystones
+private_warp_description: "Player Created Warp"
+
 # If the player can open the warp list menu via right-clicking on a compass.
 warps_menu_via_compass: false
 
@@ -131,13 +137,13 @@ waystone_skins:
     - WAXED_WEATHERED_CUT_COPPER
     - WAXED_WEATHERED_CUT_COPPER
     - WAXED_WEATHERED_CUT_COPPER_SLAB
-   WAXED_OXIDIZED_CUT_COPPER:
+  WAXED_OXIDIZED_CUT_COPPER:
      - WAXED_OXIDIZED_CUT_COPPER
      - WAXED_OXIDIZED_CHISELED_COPPER
      - WAXED_OXIDIZED_CUT_COPPER
      - WAXED_OXIDIZED_CUT_COPPER
      - WAXED_OXIDIZED_CUT_COPPER_SLAB
-   EMERALD_BLOCK:
+  EMERALD_BLOCK:
      - SMOOTH_STONE
      - LODESTONE
      - EMERALD_BLOCK

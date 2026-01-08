@@ -56,4 +56,12 @@ class ConfigServiceBukkit(private val configFile: FileConfiguration): ConfigServ
     override fun hologramsEnabled(): Boolean {
         return configFile.getBoolean("holograms_enabled")
     }
+
+    override fun getPublicWarpDescription(): String {
+        return configFile.getString("public_warp_description", "Public Server Warp") ?: "Public Server Warp"
+    }
+
+    override fun getPrivateWarpDescription(): String {
+        return configFile.getString("private_warp_description", "Player Created Warp") ?: "Player Created Warp"
+    }
 }
