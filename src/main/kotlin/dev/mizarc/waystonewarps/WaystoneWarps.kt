@@ -254,6 +254,7 @@ class WaystoneWarps: JavaPlugin() {
             single { RemoveAllInvalidWarps(warpRepository, worldService, discoveryRepository, whitelistRepository, warpEventPublisher) }
             single { RemoveInvalidWarpsForWorld(warpRepository, worldService, discoveryRepository, whitelistRepository, warpEventPublisher) }
 
+            single<ConfigService> { configService }
             single<LocalizationProvider> { PropertiesLocalizationProvider(configService, dataFolder, playerLocaleService) }
         }
 
